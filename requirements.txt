@@ -1,0 +1,14 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+tensorflow
+keras
+seaborn
+tqdm
+imagehash
+opencv-python
+streamlit
+tqdm
+random
+plotly
