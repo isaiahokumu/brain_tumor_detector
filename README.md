@@ -32,10 +32,10 @@ brain-tumor-detector/
 |
 ├── mri_dataset/
 │   ├── Testing/              # Test data
-|       ├──glioma
-|       ├──meningioma
-|       ├──notumor
-|       └──pituitary
+|       ├── glioma
+|       ├── meningioma
+|       ├── notumor
+|       └── pituitary
 │   └── Training/             # Training data
 |       ├── glioma
 |       ├── meningioma
@@ -52,8 +52,7 @@ brain-tumor-detector/
 │
 ├── src/
 │   └── app.py                   # User interface
-│
-│
+|
 ├── README.md
 └── requirements.txt
 ```
@@ -124,5 +123,6 @@ Use GCP Vertex AI for training and prediction.
 
 
 **author**: Isaiah Okumu
+
 
 
