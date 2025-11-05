@@ -95,11 +95,11 @@ cd brain-tumor-detector
 
 
 ### Install Dependencies
-pip install -r deployment/requirements.txt
+pip install -r requirements.txt
 
 ### Download Dataset
 
-Use the Kaggle Brain MRI Dataset
+Use the [Kaggle Brain MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
 Unzip it into:
 ```bash
@@ -124,6 +124,7 @@ Model Metrics.
 
 
 **author**: Isaiah Okumu
+
 
 
 
