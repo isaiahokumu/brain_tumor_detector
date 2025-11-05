@@ -89,7 +89,8 @@ brain-tumor-detector/
 
 ### Clone the Repository
 
-git clone[ https://github.com/<isaiahokumu>/brain-tumor-ai.git](https://github.com/isaiahokumu/brain_tumor_detector.git)
+git clone[ https://github.com/isaiahokumu/brain-tumor-detector.git](https://github.com/isaiahokumu/brain_tumor_detector.git)
+
 cd brain-tumor-detector
 
 
@@ -123,6 +124,7 @@ Model Metrics.
 
 
 **author**: Isaiah Okumu
+
 
 
 
