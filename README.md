@@ -89,8 +89,8 @@ brain-tumor-detector/
 
 ### Clone the Repository
 
-git clone https://github.com/<your-username>/brain-tumor-ai.git
-cd brain-tumor-ai
+git clone[ https://github.com/<isaiahokumu>/brain-tumor-ai.git](https://github.com/isaiahokumu/brain_tumor_detector.git)
+cd brain-tumor-detector
 
 
 ### Install Dependencies
@@ -123,6 +123,7 @@ Model Metrics.
 
 
 **author**: Isaiah Okumu
+
 
 
 
