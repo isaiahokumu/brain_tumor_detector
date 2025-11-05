@@ -109,10 +109,10 @@ Unzip it into:
 
 Run notebooks in sequence:
 ```bash
-jupyter notebook notebooks/01_data_preprocessing.ipynb
+jupyter notebook notebooks/code.ipynb
 ```
-### Cloud Deployment
-Use GCP Vertex AI for training and prediction.
+### Metrics
+Model Metrics.
 
 | Metric               | precision   | recall | f1score  | support |
 | -------------------- | ----------- | -------| -------- | ------- |
@@ -123,6 +123,7 @@ Use GCP Vertex AI for training and prediction.
 
 
 **author**: Isaiah Okumu
+
 
 
 
