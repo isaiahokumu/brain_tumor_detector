@@ -26,13 +26,17 @@ This project addresses these challenges by proposing a robust and integrated dee
 ```graphql
 brain-tumor-detector/
 │
+├── eda_outputs/
+│   ├── plots/
+│   └── samples/
+|
 ├── mri_dataset/
 │   ├── Testing/              # Test data
 |       ├──glioma
 |       ├──meningioma
 |       ├──notumor
 |       └──pituitary
-│   ├── Training/             # Training data
+│   └── Training/             # Training data
 |       ├── glioma
 |       ├── meningioma
 |       ├── notumor
@@ -49,10 +53,6 @@ brain-tumor-detector/
 ├── src/
 │   └── app.py                   # User interface
 │
-├── tests/
-│   ├── test_models.py
-│   ├── test_ocr.py
-│   └── test_api.py
 │
 ├── README.md
 └── requirements.txt
@@ -124,4 +124,5 @@ Use GCP Vertex AI for training and prediction.
 
 
 **author**: Isaiah Okumu
+
 
