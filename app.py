@@ -14,7 +14,7 @@ import requests
 
 # 🔹 PAGE CONFIG
 st.set_page_config(
-    page_title="Brain MRI Analyzer + Clinical Notes Assistant",
+    page_title="Brain MRI Analyzer",
     layout="wide",
     page_icon="🧠",
 )
