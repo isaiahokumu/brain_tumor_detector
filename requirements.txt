@@ -10,5 +10,4 @@ imagehash
 opencv-python
 streamlit
 tqdm
-random
 plotly
