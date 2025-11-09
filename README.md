@@ -16,7 +16,7 @@ While automated systems have been proposed, many existing solutions suffer from 
 This project addresses these challenges by proposing a robust and integrated deep learning system for the automated detection and classification of brain tumors from MRI scans. The primary objective is to develop a highly accurate and efficient model that can differentiate between various tumor types and normal brain tissue.
 
 ### Key Components
-- **Deep Learning:** Classification & segmentation of brain tumors using CNNs and transfer models (VGG16/VGG19).
+- **Deep Learning:** Classification & segmentation of brain tumors using CNNs.
 - **Autoencoders:** Unsupervised anomaly detection to identify abnormal brain regions.
 - **Web Interface:** Streamlit application for clinicians and researchers to visualize results.
 
@@ -24,39 +24,37 @@ This project addresses these challenges by proposing a robust and integrated dee
 
 ## Project Architecture
 ```graphql
-brain-tumor-ai/
+brain-tumor-detector/
 │
+├── eda_outputs/
+│   ├── plots/
+│   └── samples/
+|
 ├── mri_dataset/
-│   ├── raw/                 # Raw MRI data
-│   ├── processed/           # Preprocessed/normalized data
-│   └── reports/             # OCR input files
+│   ├── Testing/              # Test data
+|       ├── glioma
+|       ├── meningioma
+|       ├── notumor
+|       └── pituitary
+│   └── Training/             # Training data
+|       ├── glioma
+|       ├── meningioma
+|       ├── notumor
+|       └── pituitary
 │
 ├── models/
-│   ├── cnn_model.h5         # CNN baseline model
-│   ├── vgg16_model.h5       # Transfer learning model (VGG16)
-│   ├── vgg19_model.h5       # Transfer learning model (VGG19)
-│   └── autoencoder_model.h5 # Autoencoder anomaly detection
+│   ├── brain_tumor.keras         # CNN baseline model
+│   └── autoencoder_model.keras   # Autoencoder anomaly detection
 │
 ├── notebooks/
-│   ├── 01_data_preprocessing.ipynb
-│   ├── 02_cnn_training.ipynb
-│   ├── 03_vgg16_training.ipynb
-│   ├── 04_autoencoder.ipynb
-│   ├── 05_gradcam_visualization.ipynb
-│   └── 06_sentiment_analysis.ipynb
+│   ├── code.ipynb
+│   └── autoencoder.ipynb
 │
 ├── src/
-│   ├── data_loader.py           # Handles data ingestion and augmentation
-│   ├── model_cnn.py             # CNN architecture
 │   └── app.py                   # User interface
-│
-├── tests/
-│   ├── test_models.py
-│   ├── test_ocr.py
-│   └── test_api.py
-│
+|
 ├── README.md
-└── LICENSE
+└── requirements.txt
 ```
 
 ---
@@ -66,10 +64,8 @@ brain-tumor-ai/
 | Component | Description |
 |------------|-------------|
 | **CNN Classifier** | Custom convolutional model for baseline classification |
-| **Transfer Learning (VGG16/VGG19)** | Pre-trained models fine-tuned for tumor detection |
 | **Autoencoder** | Unsupervised anomaly detection using reconstruction errors |
 | **Cloud Deployment** | Model hosting via Streamlit Cloud |
-| **Explainability (Grad-CAM)** | Visual heatmaps showing regions influencing predictions |
 
 ---
 
@@ -80,11 +76,6 @@ brain-tumor-ai/
 - Scikit-learn  
 - NumPy / Pandas  
 - OpenCV  
-
-**NLP & OCR**
-- Tesseract (OCR)  
-- Hugging Face Transformers  
-- BeautifulSoup / Requests  
 
 **Web**
 - Streamlit
@@ -98,16 +89,17 @@ brain-tumor-ai/
 
 ### Clone the Repository
 
-git clone https://github.com/<your-username>/brain-tumor-ai.git
-cd brain-tumor-ai
+git clone[ https://github.com/isaiahokumu/brain-tumor-detector.git](https://github.com/isaiahokumu/brain_tumor_detector.git)
+
+cd brain-tumor-detector
 
 
 ### Install Dependencies
-pip install -r deployment/requirements.txt
+pip install -r requirements.txt
 
 ### Download Dataset
 
-Use the Kaggle Brain MRI Dataset
+Use the [Kaggle Brain MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
 Unzip it into:
 ```bash
@@ -118,16 +110,24 @@ Unzip it into:
 
 Run notebooks in sequence:
 ```bash
-jupyter notebook notebooks/01_data_preprocessing.ipynb
+jupyter notebook notebooks/code.ipynb
 ```
-### Cloud Deployment
-Use GCP Vertex AI for training and prediction.
+### Metrics
+Model Metrics.
 
-| Metric               | CNN | VGG16 | VGG19 |
-| -------------------- | --- | ----- | ----- |
-| Accuracy             | TBD | TBD   | TBD   |
-| Recall (Sensitivity) | TBD | TBD   | TBD   |
-| F1 Score             | TBD | TBD   | TBD   |
-| AUC                  | TBD | TBD   | TBD   |
+| Metric               | precision   | recall | f1score  | support |
+| -------------------- | ----------- | -------| -------- | ------- |
+| glioma               | 0.99        | 0.92   | 0.95     | 300     |
+| meningioma           | 0.91        | 0.92   | 0.91     | 306     |
+| notumor              | 0.96        | 0.92   | 0.97     | 405     |
+| pituitary            | 0.87        | 0.92   | 0.98     | 300     |
+
+
+**author**: Isaiah Okumu
+
+
+
+
+
 
 
