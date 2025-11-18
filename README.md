@@ -1,6 +1,6 @@
 # Brain Tumor Detection & Intelligence System
 
-An integrated deep learning project that detects brain tumors from MRI scans using **Convolutional Neural Networks (CNNs)**, **VGG16/VGG19 transfer learning**, and **Autoencoders** for anomaly detection and **cloud-based deployment**.
+An integrated deep learning project that detects brain tumors from MRI scans using **Convolutional Neural Networks (CNNs)**.
 
 ---
 
@@ -17,7 +17,6 @@ This project addresses these challenges by proposing a robust and integrated dee
 
 ### Key Components
 - **Deep Learning:** Classification & segmentation of brain tumors using CNNs.
-- **Autoencoders:** Unsupervised anomaly detection to identify abnormal brain regions.
 - **Web Interface:** Streamlit application for clinicians and researchers to visualize results.
 
 ---
@@ -44,11 +43,9 @@ brain-tumor-detector/
 │
 ├── models/
 │   ├── brain_tumor.keras         # CNN baseline model
-│   └── autoencoder_model.keras   # Autoencoder anomaly detection
 │
 ├── notebooks/
 │   ├── code.ipynb
-│   └── autoencoder.ipynb
 │
 ├── src/
 │   └── app.py                   # User interface
@@ -64,7 +61,6 @@ brain-tumor-detector/
 | Component | Description |
 |------------|-------------|
 | **CNN Classifier** | Custom convolutional model for baseline classification |
-| **Autoencoder** | Unsupervised anomaly detection using reconstruction errors |
 | **Cloud Deployment** | Model hosting via Streamlit Cloud |
 
 ---
@@ -124,6 +120,7 @@ Model Metrics.
 
 
 **author**: Isaiah Okumu
+
 
 
 
